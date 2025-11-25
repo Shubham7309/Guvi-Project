@@ -1,5 +1,4 @@
-Here is a **clean, professional, submission-ready README.md** for your Java Web Project (JavaQuizPlatform).
-You can copy-paste it directly, or if you want a PDF version, tell me and I’ll generate it.
+
 
 ---
 
@@ -162,14 +161,7 @@ http://localhost:8080/JavaQuizPlatform/jsp/login.jsp
 
 You can register a Creator and Participant manually using the Register page.
 
----
 
-## 📚 Documentation Included
-
-A PDF provided by you is included in the project folder for academic submission reference:
-
-```
-70 Live Project Topic - 3rd Sem SCSE- 2028 Passout.pdf
 ```
 
 ---
