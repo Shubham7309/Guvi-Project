@@ -40,26 +40,26 @@ Result display with Attempt ID
 Secure sessions using HttpSession
 
 🏗️ Project Structure
-JavaQuizPlatform/
-|
-+--- src/
-|     |
-|     +--- model/          (Java model classes: User, Quiz, Question, Option)
-|     +--- dao/            (Database Access Objects: DBUtil, UserDAO, QuizDAO, etc.)
-|     +--- service/        (Business logic layer)
-|     +--- servlet/        (All servlets: Login, Register, CreateQuiz, TakeQuiz, etc.)
-|
-+--- WebContent/
-|     |
-|     +--- jsp/            (JSP pages: login.jsp, register.jsp, dashboards, etc.)
-|     |
-|     +--- WEB-INF/
-|             |
-|             +--- web.xml (Deployment descriptor)
-|
-+--- schema.sql            (MySQL database creation script)
-+--- README.txt            (Project documentation)
+JavaQuizPlatform
+• src
+ • model
+  - Contains Java model classes such as User, Quiz, Question, and Option
+ • dao
+  - Contains database access classes such as DBUtil, UserDAO, QuizDAO, QuestionDAO
+ • service
+  - Contains business logic classes
+ • servlet
+  - Contains all servlets including LoginServlet, RegisterServlet, CreateQuizServlet, TakeQuizServlet, SubmitQuizServlet
 
+WebContent
+• jsp
+ - Contains JSP pages such as login.jsp, register.jsp, creatorDashboard.jsp, participantDashboard.jsp, addQuestion.jsp, takeQuiz.jsp, result.jsp
+• WEB-INF
+ - Contains web.xml (deployment descriptor)
+
+Other Files
+• schema.sql – MySQL database creation script
+• README.txt – Project documentation
 
 
 🛠️ Technologies Used
