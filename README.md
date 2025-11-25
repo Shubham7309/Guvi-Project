@@ -2,7 +2,7 @@
 
 ---
 
-# 📘 JavaQuizPlatform – README
+# 📘 JavaQuizPlatform
 
 ## 📌 Project Overview
 
