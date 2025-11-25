@@ -41,20 +41,25 @@ Secure sessions using HttpSession
 
 🏗️ Project Structure
 JavaQuizPlatform/
-│
-├── src/
-│   ├── model/                 # Java model classes (User, Quiz, Question, Option)
-│   ├── dao/                   # Database Access Objects (DBUtil, UserDAO, QuizDAO…)
-│   ├── service/               # Business logic layer
-│   └── servlet/               # All servlets (Login, Register, CreateQuiz, SubmitQuiz…)
-│
-├── WebContent/
-│   ├── jsp/                   # JSP pages (login.jsp, register.jsp, dashboards…)
-│   └── WEB-INF/
-│       └── web.xml            # Deployment descriptor
-│
-├── schema.sql                 # MySQL database creation script
-└── README.txt                 # Project documentation
+|
++--- src/
+|     |
+|     +--- model/          (Java model classes: User, Quiz, Question, Option)
+|     +--- dao/            (Database Access Objects: DBUtil, UserDAO, QuizDAO, etc.)
+|     +--- service/        (Business logic layer)
+|     +--- servlet/        (All servlets: Login, Register, CreateQuiz, TakeQuiz, etc.)
+|
++--- WebContent/
+|     |
+|     +--- jsp/            (JSP pages: login.jsp, register.jsp, dashboards, etc.)
+|     |
+|     +--- WEB-INF/
+|             |
+|             +--- web.xml (Deployment descriptor)
+|
++--- schema.sql            (MySQL database creation script)
++--- README.txt            (Project documentation)
+
 
 
 🛠️ Technologies Used
