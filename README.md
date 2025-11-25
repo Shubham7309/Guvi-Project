@@ -1,184 +1,186 @@
-📘 JavaQuizPlatform – README
-📌 Project Overview
+---
 
-JavaQuizPlatform is a fully functional Java-based web application that allows users to register, log in, create quizzes, add questions, attempt quizzes, and view results.
-The project uses JSP + Servlets + JDBC + MySQL + Tomcat and follows a clean MVC-style structure suitable for academic submission.
+# 📘 JavaQuizPlatform – README
+
+## 📌 Project Overview
+
+**JavaQuizPlatform** is a fully functional Java-based web application that allows users to register, log in, create quizzes, add questions, attempt quizzes, and view results.
+The project uses **JSP + Servlets + JDBC + MySQL + Tomcat** and follows a clean MVC-style structure suitable for academic submission.
 
 This project satisfies your marking rubric:
 
-🟢 Problem Understanding & Solution Design
+* 🟢 Problem Understanding & Solution Design
+* 🟢 Core Java Concepts
+* 🟢 Database Integration (JDBC)
+* 🟢 Servlets & Web Integration
 
-🟢 Core Java Concepts
+---
 
-🟢 Database Integration (JDBC)
+## 🚀 Features
 
-🟢 Servlets & Web Integration
+### 👤 User Roles
 
-🚀 Features
-👤 User Roles
+* **Participant** – Can attempt quizzes & view results.
+* **Creator** – Can create quizzes and add questions.
+* **Admin (optional)** – Can manage platform (future scope).
 
-Participant – Can attempt quizzes & view results.
+### 📋 Core Functionality
 
-Creator – Can create quizzes and add questions.
+* User Registration & Login
+* Quiz Creation
+* Adding Questions + Multiple Options
+* Taking Quiz with MCQs
+* Auto-evaluated scoring
+* Result display with Attempt ID
+* Secure sessions using HttpSession
 
-Admin (optional) – Can manage platform (future scope).
+---
 
-📋 Core Functionality
+## 🏗️ Project Structure
 
-User Registration & Login
+```
+JavaQuizPlatform/
+│
+├── src/
+│   ├── model/        # Java model classes (User, Quiz, Question, etc.)
+│   ├── dao/          # Database Access Objects (DBUtil, UserDAO, QuizDAO…)
+│   ├── service/      # Business logic layer
+│   └── servlet/      # All servlets (Login, Register, CreateQuiz, etc.)
+│
+├── WebContent/
+│   ├── jsp/          # JSP pages (login.jsp, register.jsp, dashboards…)
+│   └── WEB-INF/
+│       └── web.xml   # Deployment descriptor
+│
+├── schema.sql        # MySQL database creation script
+└── README.txt        # Project documentation
+```
 
-Quiz Creation
+---
 
-Adding Questions + Multiple Options
+## 🛠️ Technologies Used
 
-Taking Quiz with MCQs
+| Component   | Technology                 |
+| ----------- | -------------------------- |
+| Language    | Java 8                     |
+| Backend     | Servlets, JSP              |
+| Database    | MySQL                      |
+| JDBC Driver | MySQL Connector/J          |
+| Server      | Apache Tomcat 9.0          |
+| IDE         | Eclipse Enterprise Edition |
 
-Auto-evaluated scoring
+---
 
-Result display with Attempt ID
+## 📦 How to Run the Project
 
-Secure sessions using HttpSession
+### ✅ 1. Install Required Software
 
-🏗️ Project Structure
-JavaQuizPlatform
-• src
- • model
-  - Contains Java model classes such as User, Quiz, Question, and Option
- • dao
-  - Contains database access classes such as DBUtil, UserDAO, QuizDAO, QuestionDAO
- • service
-  - Contains business logic classes
- • servlet
-  - Contains all servlets including LoginServlet, RegisterServlet, CreateQuizServlet, TakeQuizServlet, SubmitQuizServlet
+* **Eclipse for Enterprise Java Developers**
+* **Apache Tomcat 9.0**
+* **MySQL Server + MySQL Workbench**
+* **MySQL Connector/J (JDBC driver)**
 
-WebContent
-• jsp
- - Contains JSP pages such as login.jsp, register.jsp, creatorDashboard.jsp, participantDashboard.jsp, addQuestion.jsp, takeQuiz.jsp, result.jsp
-• WEB-INF
- - Contains web.xml (deployment descriptor)
+---
 
-Other Files
-• schema.sql – MySQL database creation script
-• README.txt – Project documentation
+### ✅ 2. Import the Project into Eclipse
 
+1. Open Eclipse → `File → Import → Existing Projects into Workspace`
+2. Select the extracted folder **JavaQuizPlatform**
+3. Click Finish.
 
-🛠️ Technologies Used
-Component	Technology
-Language	Java 8
-Backend	Servlets, JSP
-Database	MySQL
-JDBC Driver	MySQL Connector/J
-Server	Apache Tomcat 9.0
-IDE	Eclipse Enterprise Edition
-📦 How to Run the Project
-✅ 1. Install Required Software
+---
 
-Eclipse for Enterprise Java Developers
+### ✅ 3. Configure Tomcat
 
-Apache Tomcat 9.0
+1. `Window → Preferences → Server → Runtime Environments`
+2. Add **Apache Tomcat v9.0**
+3. Choose your Tomcat installation folder.
 
-MySQL Server + MySQL Workbench
+---
 
-MySQL Connector/J (JDBC driver)
-
-✅ 2. Import the Project into Eclipse
-
-Open Eclipse → File → Import → Existing Projects into Workspace
-
-Select the extracted folder JavaQuizPlatform
-
-Click Finish.
-
-✅ 3. Configure Tomcat
-
-Window → Preferences → Server → Runtime Environments
-
-Add Apache Tomcat v9.0
-
-Choose your Tomcat installation folder.
-
-✅ 4. Add MySQL JDBC Driver
+### ✅ 4. Add MySQL JDBC Driver
 
 Download MySQL connector JAR:
 
+```
 mysql-connector-j-8.0.xx.jar
-
+```
 
 Right-click project → Build Path → Add External Archives.
 
-✅ 5. Configure Database
+---
 
-Open MySQL Workbench
+### ✅ 5. Configure Database
 
-Open the script: schema.sql
+1. Open **MySQL Workbench**
+2. Open the script: `schema.sql`
+3. Run the full script to create:
 
-Run the full script to create:
+   * users
+   * quizzes
+   * questions
+   * options
+   * quiz_attempts
+   * attempt_answers
 
-users
+---
 
-quizzes
-
-questions
-
-options
-
-quiz_attempts
-
-attempt_answers
-
-✅ 6. Update DB Credentials
+### ✅ 6. Update DB Credentials
 
 Go to:
 
+```
 src/dao/DBUtil.java
-
+```
 
 Update:
 
+```java
 private static final String URL = "jdbc:mysql://localhost:3306/quiz_db";
 private static final String USER = "root";
 private static final String PASSWORD = "your_password";
+```
 
-✅ 7. Run the Project
+---
 
-Right-click Tomcat v9 Server → Add and Remove… → Add your project → Start.
+### ✅ 7. Run the Project
+
+Right-click **Tomcat v9 Server** → *Add and Remove…* → Add your project → Start.
 
 Open in browser:
 
+```
 http://localhost:8080/JavaQuizPlatform/jsp/login.jsp
+```
 
-🧪 Test Credentials (Example)
+---
+
+## 🧪 Test Credentials (Example)
 
 You can register a Creator and Participant manually using the Register page.
 
-📚 Documentation Included
+---
 
-A PDF provided by you is included in the project folder for academic submission reference:
+## 📚 Documentation Included
 
-70 Live Project Topic - 3rd Sem SCSE- 2028 Passout.pdf
+---
 
-🧩 Future Enhancements
+## 🧩 Future Enhancements
 
-Admin panel
+* Admin panel
+* Quiz timer
+* Quiz analytics
+* Password hashing
+* Email-based user verification
 
-Quiz timer
+---
 
-Quiz analytics
-
-Password hashing
-
-Email-based user verification
-
-🏁 Conclusion
+## 🏁 Conclusion
 
 This project showcases:
 
-Java web development skills
-
-Understanding of MVC architecture
-
-Proper usage of JDBC
-
-Practical servlet and JSP integration
-
-Real-world quiz system functionality
+* Java web development skills
+* Understanding of MVC architecture
+* Proper usage of JDBC
+* Practical servlet and JSP integration
+* Real-world quiz system functionality
