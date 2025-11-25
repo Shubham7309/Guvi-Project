@@ -186,4 +186,4 @@ This project showcases:
 * Practical servlet and JSP integration
 * Real-world quiz system functionality
 
-If you want a **project report**, **UML diagrams**, **ER-Diagram**, **PPT**, or a **PDF README**, just tell me — I’ll generate them for you!
+
